@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comediantes Antigos de Malidinesia</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Lato:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <video id="background-video" autoplay loop muted>
+      <source src="/assets/background.mp4" type="video/mp4" />
+      Seu navegador não suporta vídeo.
+    </video>
+
+    <div class="main-container">
+      <h1>🎭 Os Comediantes de Malidinesia</h1>
+      <p class="subtitle">Calculadora de Custos de Transporte</p>
+
+      <div class="challenge-description">
+        <p>
+          Otimize a distribuição de Convites Teatrais. Os Voluntários precisam visitar pontos de ônibus, minimizando
+          custos de transporte.
+        </p>
+
+        <br />
+        <p>📝 Como Inserir:</p>
+        <br />
+        <ul>
+          <li>1º campo: Total de pontos</li>
+          <li>2º campo: Número de rotas</li>
+          <li>Próximas linhas: Rotas (Origem, Destino, Custo)</li>
+        </ul>
+        <br />
+        <p><strong>Exemplo:</strong> 2,2 | 1,2,13 | 2,1,33</p>
+      </div>
+      <br />
+      <div class="input-section">
+        <div class="input-group">
+          <label for="pointsInput">Quantidade de Pontos:</label>
+          <input type="number" id="pointsInput" min="2" placeholder="Ex: 4" />
+        </div>
+
+        <div class="input-group">
+          <label for="routesInput">Número de Rotas:</label>
+          <input type="number" id="routesInput" min="1" placeholder="Ex: 6" />
+        </div>
+
+        <div class="input-group">
+          <label for="routeDetailsInput">Rotas:</label>
+          <textarea
+            id="routeDetailsInput"
+            placeholder="Origem,Destino,Custo
+Ex: 1,2,10
+2,1,60
+1,3,20"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="buttons-section">
+        <button class="custom-btn btn-3" id="calculateBtn">
+          <span>CALCULAR</span>
+        </button>
+        <button class="custom-btn btn-3" id="returnBtn">
+          <span>RETORNAR</span>
+        </button>
+      </div>
+
+      <div class="result-section" id="resultSection">
+        <h3>📊 Resultado</h3>
+        <div class="result-content" id="resultContent">
+          <p class="instruction">Digite os dados e clique em CALCULAR para ver os resultados.</p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
